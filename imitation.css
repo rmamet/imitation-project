@@ -16,6 +16,8 @@ header {
 .main-imitation {
   max-width: 630px;
   max-height: 708px;
+  min-width: 630px;
+  min-height: 708px;
   padding: 1em;
   background-color: white;
 }
@@ -27,14 +29,23 @@ header {
 
 h1 {
   font-family: CloisterBlack;
+  color: black;
 }
 
-p {
+p,
+figcaption {
   font-family: serif;
+  font-size: 10px;
+  text-align: center;
 }
 
-.attrib {
-  text-align: center;
+img {
+  display: block;
+  margin: auto;
+}
+
+.r-and-j {
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.25fr 1.25fr 2fr;
 }
 
 .grid00 {
@@ -52,4 +63,29 @@ p {
 .grid11 {
   grid-column: 4;
   grid-row: 2;
+}
+
+h2 {
+  font-family: CloisterBlack;
+  color: black;
+}
+
+.sec-top {
+  border-style: solid;
+  border-width: 2px 2px 1px 2px;
+}
+
+.sec {
+  border-style: solid;
+  border-width: 1px 2px;
+}
+
+.sec-bottom {
+  border-style: solid;
+  border-width: 1px 2px 2px 2px;
+}
+
+.sec-grid {
+  display: grid;
+  grid-auto-flow: column;
 }
