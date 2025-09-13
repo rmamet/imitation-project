@@ -15,9 +15,7 @@ header {
 
 .main-imitation {
   max-width: 630px;
-  max-height: 708px;
   min-width: 630px;
-  min-height: 708px;
   padding: 1em;
   background-color: white;
 }
