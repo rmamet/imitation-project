@@ -1,55 +1,75 @@
 /* Code for all screen sizes */
 
-/* BEGIN MOBILE RULES */
-@media only screen and (max-width: 768px) {
-  /* Code for mobile phones only: */
-
-  /* Mobile label */
-  main::before {
-    content: "Mobile";
-    background-color: #c8787888;
-  }
-  /* End mobile label */
+* {
+  flex-wrap: wrap;
 }
 
-/* BEGIN MEDIUM WIDTH RULES */
-@media only screen and (min-width: 768px) and (max-width: 1399px) {
-  /* Code for medium width and bigger : */
-
-  /* Laptop label */
-  main::before {
-    content: "Laptop";
-    background-color: #45454588;
-  }
-  /* End laptop label */
+@font-face {
+  font-family: CloisterBlack;
+  src: url(CloisterBlackLight.ttf);
 }
 
-/* BEGIN WIDE SCREEN RULES */
-@media only screen and (min-width: 1400px) {
-  /* Code for wide screen only */
-
-  /* Widescreen label */
-  main::before {
-    content: "Wide";
-    background-color: #00438888;
-  }
-  /* End widescreen label */
+header > * {
+  text-align: start !important;
 }
 
-/* BACK TO CODE FOR ALL SIZES */
+h1,
+h2 {
+  font-family: CloisterBlack;
+  color: black;
+}
 
-/* Code to insert circular label label to show how responsive code is working on lower right */
-main::before {
-  position: fixed;
-  bottom: 2px;
-  right: 2px;
-  color: #efefef;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-family: Helvetica, sans-serif;
-  font-size: 8pt;
+p,
+figcaption {
+  font-family: serif;
+  font-size: 10px;
+  /* text-align: center; */
+}
+
+details > summary:hover {
+  cursor: pointer;
+}
+
+details > summary {
+  transition: all 1s ease-in-out;
+  font-family: CloisterBlack;
+  color: black;
+  font-size: 16px;
+  background-color: none;
+}
+
+.sec-grid {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* grid-auto-flow: column; */
+}
+img {
+  display: block;
+  margin: auto;
+}
+p,
+figcaption {
+  text-align: center;
+}
+
+details > section {
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+  background-color: none;
+}
+details[open] > section {
+  transition: all 1s ease-in-out;
+  opacity: 1;
+  height: auto;
+  background-color: lightgray;
+}
+
+details[open] > summary {
+  background-color: lightslategray;
+  font-size: 26px;
+}
+
+details {
+  text-align: center;
 }
